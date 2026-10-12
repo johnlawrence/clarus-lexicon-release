@@ -1,0 +1,142 @@
+# Portuguese translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-08-12 13:18+0100\n"
+"PO-Revision-Date: 2025-10-07 14:52+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: pt <LL@li.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/templates/404.html:6
+msgid "Not found"
+msgstr "Não encontrado"
+
+#: app/templates/404.html:7
+msgid "Sorry, we couldn't find that page or term."
+msgstr "Lamentamos, não foi possível encontrar essa página ou termo."
+
+#: app/templates/404.html:8
+msgid "Back to search"
+msgstr "Voltar à pesquisa"
+
+#: app/templates/base.html:40 app/templates/index.html:8
+msgid "Clarus logo"
+msgstr "Logótipo Clarus"
+
+#: app/templates/base.html:41 app/templates/index.html:9
+msgid "Multilingual Lexicon of Digital Forensics"
+msgstr "Léxico Multilingue de Computação Forense"
+
+#: app/templates/base.html:43
+msgid "Quick links"
+msgstr "Ligações rápidas"
+
+#: app/templates/base.html:44
+msgid "About"
+msgstr "Sobre"
+
+#: app/templates/base.html:45
+msgid "View"
+msgstr "Ver"
+
+#: app/templates/base.html:46
+msgid "Download"
+msgstr "Descarregar"
+
+#: app/templates/base.html:57
+msgid "Select language"
+msgstr "Selecionar idioma"
+
+#: app/templates/index.html:15
+msgid "Search..."
+msgstr "Procurar..."
+
+#: app/templates/index.html:15 app/templates/search_results.html:10
+msgid "Search"
+msgstr "Procurar"
+
+#: app/templates/index.html:22 app/templates/search_results.html:17
+msgid "Suggestions"
+msgstr "Sugestões"
+
+#: app/templates/lexicon.html:7
+#, python-format
+msgid "%(count)s terms"
+msgstr "%(count)s termos"
+
+#: app/templates/lexicon.html:9
+msgid "Jump to letter"
+msgstr "Ir para a letra"
+
+#: app/templates/lexicon.html:36
+msgid "No words found for this language."
+msgstr "Não foram encontradas palavras para este idioma."
+
+#: app/templates/search_results.html:20
+msgid "Results for"
+msgstr "Resultados para"
+
+#: app/templates/search_results.html:31
+msgid "No matches found."
+msgstr "Nenhum resultado encontrado."
+
+#: app/templates/term_entry.html:9
+msgid "Definition"
+msgstr "Definição"
+
+#: app/templates/term_entry.html:12
+msgid "Frequency"
+msgstr "Frequência"
+
+#: app/templates/term_entry.html:13
+#, python-format
+msgid "Frequency: %(freq)s of %(max)s"
+msgstr "Frequência: %(freq)s de %(max)s"
+
+#: app/templates/term_entry.html:18
+msgid "Usage Example"
+msgstr "Exemplo de utilização"
+
+#: app/templates/term_entry.html:21
+msgid "Left Collocates"
+msgstr "Colocações à esquerda"
+
+#: app/templates/term_entry.html:24
+msgid "Right Collocates"
+msgstr "Colocações à direita"
+
+#: app/templates/term_entry.html:27
+msgid "Translations"
+msgstr "Traduções"
+
+#~ msgid "Search"
+#~ msgstr ""
+
+#~ msgid "Search results"
+#~ msgstr ""
+
+#~ msgid "You searched for"
+#~ msgstr ""
+
+#~ msgid "No query supplied."
+#~ msgstr ""
+
+#~ msgid "Words in all languages"
+#~ msgstr ""
+
+#~ msgid "View the full Lexicon"
+#~ msgstr "Ver o léxico completo"
+
+#~ msgid "Back"
+#~ msgstr "Voltar"

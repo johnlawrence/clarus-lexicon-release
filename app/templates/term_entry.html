@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-10" style="margin-top:60px;">
+                <h1 class="serif-font" style="margin-top: 20px;">{{ localizations[trans_lang]['word'] }} <span class="sans-font" style="color: #999; font-weight:300; font-size: 0.7em;"">({{ term['pos'] }})</span></h1>
+                <span class="badge bg-secondary">{{ localizations[trans_lang]['category'] }}</span>
+
+                <h5 class="serif-font term-details">{{ _('Definition') }}</h5>
+                <p>{{ localizations[trans_lang]['definition'] }}</p>
+
+                <h5 class="serif-font term-details">{{ _('Frequency') }} &nbsp;
+                    <span role="img" aria-label="{{ _('Frequency: %(freq)s of %(max)s', freq=term['frequency'], max=3) }}">
+                        <span style="color: #033037;" aria-hidden="true">{% for i in range(term['frequency']) %}▬{% endfor %}</span><span style="color: #aaa;" aria-hidden="true">{% for i in range(term['frequency'],3) %}▬{% endfor %}</span>
+                    </span>
+                </h5>
+
+                <h5 class="serif-font term-details">{{ _('Usage Example') }}</h5>
+                <p>{{ localizations[trans_lang]['usage_example'] }}</p>
+
+                <h5 class="serif-font term-details">{{ _('Left Collocates') }}</h5>
+                <p>{{ localizations[trans_lang]['left_collocates'] }}</p>
+
+                <h5 class="serif-font term-details">{{ _('Right Collocates') }}</h5>
+                <p>{{ localizations[trans_lang]['right_collocates'] }}</p>  
+
+                <h5 class="serif-font term-details">{{ _('Translations') }}</h5>
+                {% for code, loc in localizations.items() if not code == trans_lang %}
+                    {% if code == 'en' %}🇬🇧{% endif %} 
+                    {% if code == 'el' %}🇬🇷{% endif %} 
+                    {% if code == 'cs' %}🇨🇿{% endif %} 
+                    {% if code == 'pt' %}🇵🇹{% endif %} 
+                    {% if code == 'fi' %}🇫🇮{% endif %} 
+                    <a href="{{ url_for('main.term_entry', term_id=term_id, transl=code) }}" class="clarus-link">{{ loc['word'] }}</a> <br />
+                {% endfor %}
+
+                <br /> &nbsp;
+                <br /> &nbsp;
+
+          </div>
+      </div>
+  </div>
+{% endblock %}

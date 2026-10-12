@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="{{ current_locale }}" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="John Lawrence">
+    <title>Lexicon</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Favicons 
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    -->
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename= 'css/base.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename= 'css/index.css') }}" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar fixed-top justify-content-between px-5" style="background-color: #fff;">
+            <div style="display: flex; align-items:end; margin-top: 5px;">
+                {% if request.endpoint != 'main.index' %}
+                <img src="{{ url_for('static', filename= 'img/clarus-logo.png') }}" style="height: 50px; display: inline; padding-right: 20px; border-right: 1px solid #bbb;" alt="{{ _('Clarus logo') }}" />
+                <h4 style="display: inline; padding: 0px 20px; font-weight: 300;"><a href="/" style="text-decoration: none; color: #333;">{{ _('Multilingual Lexicon of Digital Forensics') }}</a></h4>
+                {% else %}
+                <nav class="home-nav-links" aria-label="{{ _('Quick links') }}">
+                    <a href="{{ url_for('main.about') }}" class="home-nav-link">{{ _('About') }}</a>
+                    <a href="{{ url_for('main.lexicon') }}" class="home-nav-link">{{ _('View') }}</a>
+                    <a href="{{ url_for('static', filename='files/full-lexicon.pdf') }}" class="home-nav-link" target="_blank" rel="noopener">{{ _('Download') }}</a>
+                </nav>
+                {% endif %}
+            </div>
+            {% if request.endpoint != 'main.index' %}
+              <div class="text-center">
+                    <!--xx-->
+              </div>
+            {% endif %}
+            <div class="text-end">
+              <form action="{{ url_for('main.set_language') }}" method="post" class="inline-block">
+                <select name="language" id="language" class="form-select lang-select shadow-none" aria-label="{{ _('Select language') }}" onchange="this.form.submit()">
+                    <option value="en" {% if current_locale == 'en' %}selected{% endif %}>🇬🇧 English</option>
+                    <option value="el" {% if current_locale == 'el' %}selected{% endif %}>🇬🇷 Ελληνικά </option>
+                    <option value="cs" {% if current_locale == 'cs' %}selected{% endif %}>🇨🇿 Čeština</option>
+                    <option value="pt" {% if current_locale == 'pt' %}selected{% endif %}>🇵🇹 Português</option>
+                    <option value="fi" {% if current_locale == 'fi' %}selected{% endif %}>🇫🇮 Suomi</option>
+                </select>
+              </form>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <!-- Grid container -->
+        <div class="container">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 funder-info">
+                    <p><small>The Clarus Project is co-funded by the European Union's Horizon Europe research and innovation programme under grant agreement No. 101121182</small></p>
+                    <img src="{{ url_for('static', filename= 'img/european-union-funding-logo.png') }}" style="width: 180px;" />
+                    <img src="{{ url_for('static', filename= 'img/uk-research-and-innovation-footer-logo.png') }}" style="width: 180px;" />
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-end align-self-center copyright-info">
+                    <p><small>Copyright © 2025 Clarus Project. All rights reserved</small></p>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+    </footer>
+
+
+    <script src="{{ url_for('static', filename= 'js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename= 'js/search-suggestions.js') }}" defer></script>
+    <script src="{{ url_for('static', filename= 'js/lexicon.js') }}" defer></script>
+
+
+</body>
+
+</html>

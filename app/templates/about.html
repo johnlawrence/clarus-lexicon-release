@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-8 about-content" style="margin-top:60px;">
+              {% include ['about_content/' + lang + '.html', 'about_content/en.html'] %}
+          </div>
+      </div>
+  </div>
+{% endblock %}

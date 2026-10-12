@@ -1,0 +1,142 @@
+# Czech translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-08-12 13:18+0100\n"
+"PO-Revision-Date: 2025-10-07 14:52+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: cs <LL@li.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/templates/404.html:6
+msgid "Not found"
+msgstr "Nenalezeno"
+
+#: app/templates/404.html:7
+msgid "Sorry, we couldn't find that page or term."
+msgstr "Je nám líto, tuto stránku ani termín se nepodařilo najít."
+
+#: app/templates/404.html:8
+msgid "Back to search"
+msgstr "Zpět na vyhledávání"
+
+#: app/templates/base.html:40 app/templates/index.html:8
+msgid "Clarus logo"
+msgstr "Logo Clarus"
+
+#: app/templates/base.html:41 app/templates/index.html:9
+msgid "Multilingual Lexicon of Digital Forensics"
+msgstr "Vícejazyčný slovník digitálního forenzního zkoumání"
+
+#: app/templates/base.html:43
+msgid "Quick links"
+msgstr "Rychlé odkazy"
+
+#: app/templates/base.html:44
+msgid "About"
+msgstr "O slovníku"
+
+#: app/templates/base.html:45
+msgid "View"
+msgstr "Zobrazit"
+
+#: app/templates/base.html:46
+msgid "Download"
+msgstr "Stáhnout"
+
+#: app/templates/base.html:57
+msgid "Select language"
+msgstr "Vyberte jazyk"
+
+#: app/templates/index.html:15
+msgid "Search..."
+msgstr "Hledat..."
+
+#: app/templates/index.html:15 app/templates/search_results.html:10
+msgid "Search"
+msgstr "Hledat"
+
+#: app/templates/index.html:22 app/templates/search_results.html:17
+msgid "Suggestions"
+msgstr "Návrhy"
+
+#: app/templates/lexicon.html:7
+#, python-format
+msgid "%(count)s terms"
+msgstr "Počet termínů: %(count)s"
+
+#: app/templates/lexicon.html:9
+msgid "Jump to letter"
+msgstr "Přejít na písmeno"
+
+#: app/templates/lexicon.html:36
+msgid "No words found for this language."
+msgstr "Pro tento jazyk nebyla nalezena žádná slova."
+
+#: app/templates/search_results.html:20
+msgid "Results for"
+msgstr "Výsledky pro"
+
+#: app/templates/search_results.html:31
+msgid "No matches found."
+msgstr "Nebyly nalezeny žádné výsledky."
+
+#: app/templates/term_entry.html:9
+msgid "Definition"
+msgstr "Definice"
+
+#: app/templates/term_entry.html:12
+msgid "Frequency"
+msgstr "Frekvence výskytu"
+
+#: app/templates/term_entry.html:13
+#, python-format
+msgid "Frequency: %(freq)s of %(max)s"
+msgstr "Frekvence výskytu: %(freq)s z %(max)s"
+
+#: app/templates/term_entry.html:18
+msgid "Usage Example"
+msgstr "Příklad použití"
+
+#: app/templates/term_entry.html:21
+msgid "Left Collocates"
+msgstr "Levé kolokáty"
+
+#: app/templates/term_entry.html:24
+msgid "Right Collocates"
+msgstr "Pravé kolokáty"
+
+#: app/templates/term_entry.html:27
+msgid "Translations"
+msgstr "Překlady"
+
+#~ msgid "Search"
+#~ msgstr ""
+
+#~ msgid "Search results"
+#~ msgstr ""
+
+#~ msgid "You searched for"
+#~ msgstr ""
+
+#~ msgid "No query supplied."
+#~ msgstr ""
+
+#~ msgid "Words in all languages"
+#~ msgstr ""
+
+#~ msgid "View the full Lexicon"
+#~ msgstr "Zobrazit celý lexikon"
+
+#~ msgid "Back"
+#~ msgstr "Zpět"

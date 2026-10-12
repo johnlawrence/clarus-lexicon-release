@@ -1,0 +1,199 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+html, body{
+    font-family: "Roboto", sans-serif;
+}
+
+.serif-font {
+    font-family: "Lora", serif;
+}
+
+.sans-font {
+    font-family: "Roboto", sans-serif;
+}
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+/* ABOUT PAGE */
+
+.about-content {
+    line-height: 1.7;
+    padding-bottom: 60px;
+}
+
+.about-content h1 {
+    margin-bottom: 24px;
+}
+
+.about-content hr {
+    margin: 30px 0;
+}
+
+.about-content ul {
+    margin-bottom: 1rem;
+}
+
+.about-subpoints {
+    margin: 0 0 1rem;
+    padding-left: 18px;
+    border-left: 3px solid #eee;
+    color: #555;
+}
+
+.about-subpoints p:last-child {
+    margin-bottom: 0;
+}
+
+/* Modify the background color */
+.navbar-transparent {
+    background-color: transparent;
+}
+
+select.lang-select{
+    width:auto;
+    border: 0px;
+    background-color: transparent;
+}
+
+h5.term-details{
+    font-weight:600; 
+    color: #555;
+    margin-top: 40px;
+}
+
+ul.lexi-list li::marker {
+  color: #aaa;
+}
+
+a.clarus-link {
+    color: #033037 !important;
+    text-decoration: none;
+}
+
+a.clarus-link:hover {
+    color: #00454f !important;
+    text-decoration: underline;
+}
+
+div.search-result{
+    width:100%;
+    /*Important:*/
+    position:relative;
+    padding: 20px 10px 20px 20px;
+}
+
+div.search-result:hover{
+    background-color: #f8f9fa;
+}
+
+div.search-result:hover h5{
+    text-decoration: underline;
+    color: #00454f !important;
+}
+
+div.search-result p{
+    font-size: small;
+}
+
+/*Important:*/
+span.link-spanner{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+
+  /* edit: fixes overlap error in IE7/8,
+     make sure you have an empty gif
+  background-image: url('empty.gif');*/
+}
+
+span.link-spanner{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+
+  /* edit: fixes overlap error in IE7/8,
+     make sure you have an empty gif
+  background-image: url('empty.gif');*/
+}
+
+/* LEXICON PAGE */
+
+p.lexicon-total {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+nav.lexicon-jumpbar {
+    position: sticky;
+    /* set at runtime from the real navbar height - see lexicon.js */
+    top: var(--lexicon-navbar-height, 60px);
+    z-index: 1030;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    background-color: #fff;
+    padding: 14px 4px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+nav.lexicon-jumpbar a,
+nav.lexicon-jumpbar span.disabled {
+    display: inline-block;
+    min-width: 1.6em;
+    text-align: center;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+nav.lexicon-jumpbar a {
+    color: #033037;
+    text-decoration: none;
+}
+
+nav.lexicon-jumpbar a:hover {
+    color: #fff;
+    background-color: #00454f;
+}
+
+nav.lexicon-jumpbar span.disabled {
+    color: #ccc;
+}
+
+section.lexicon-section {
+    scroll-margin-top: var(--lexicon-jumpbar-offset, 110px);
+}
+
+h2.serif-font .lexicon-count {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #999;
+}
+
+ul.lexi-list {
+    columns: 2;
+    column-gap: 40px;
+}
+
+ul.lexi-list li {
+    break-inside: avoid;
+}
+
+@media (max-width: 900px) {
+    ul.lexi-list {
+        columns: 1;
+    }
+}

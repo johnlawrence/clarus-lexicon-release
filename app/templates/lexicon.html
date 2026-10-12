@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-10" style="margin-top:60px;">
+            {% if groups %}
+            <p class="lexicon-total">{{ _('%(count)s terms', count=total_count) }}</p>
+
+            <nav class="lexicon-jumpbar" aria-label="{{ _('Jump to letter') }}">
+                {% for letter in alphabet %}
+                    {% if letter in groups %}
+                    <a href="#letter-{{ letter }}">{{ letter }}</a>
+                    {% else %}
+                    <span class="disabled" aria-hidden="true">{{ letter }}</span>
+                    {% endif %}
+                {% endfor %}
+            </nav>
+
+            {% for letter in alphabet if letter in groups %}
+                <section class="mb-6 lexicon-section" id="letter-{{ letter }}">
+                <h2 class="serif-font">{{ letter }} <span class="lexicon-count">{{ groups[letter]|length }}</span></h2>
+                <div style="margin-bottom: 50px;">
+                    <ul class="list-disc pl-6 lexi-list">
+                        {% for entry in groups[letter] %}
+                        <li>
+                            <a href="{{ url_for('main.term_entry', term_id=entry.id) }}" class="clarus-link">
+                            {{ entry.word }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                </section>
+            {% endfor %}
+            {% else %}
+                <p>{{ _('No words found for this language.') }}</p>
+            {% endif %}
+          </div>
+      </div>
+  </div>
+{% endblock %}
